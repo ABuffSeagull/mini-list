@@ -8,7 +8,6 @@
   "license": "MIT",
   "devDependencies": {
     "@pika/plugin-build-node": "^0.3.14",
-    "@pika/plugin-build-types": "^0.3.14",
     "@pika/plugin-build-web": "^0.3.14",
     "@pika/plugin-standard-pkg": "^0.3.14",
     "eslint": "^5.16.0",
@@ -20,15 +19,9 @@
   },
   "@pika/pack": {
     "pipeline": [
-      [
-        "@pika/plugin-standard-pkg"
-      ],
-      [
-        "@pika/plugin-build-node"
-      ],
-      [
-        "@pika/plugin-build-web"
-      ]
+      ["@pika/plugin-standard-pkg"],
+      ["@pika/plugin-build-node"],
+      ["@pika/plugin-build-web"]
     ]
   }
 }
