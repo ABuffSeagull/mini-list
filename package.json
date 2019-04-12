@@ -2,7 +2,7 @@
   "name": "mini-list",
   "version": "0.1.0",
   "description": "Small immutable array library",
-  "main": "src/index.ts",
+  "main": "src/index.js",
   "repository": "git@github.com:ABuffSeagull/mini-list.git",
   "author": "ABuffSeagull <reecevanatta@gmail.com>",
   "license": "MIT",
@@ -11,14 +11,24 @@
     "@pika/plugin-build-types": "^0.3.14",
     "@pika/plugin-build-web": "^0.3.14",
     "@pika/plugin-standard-pkg": "^0.3.14",
-    "typescript": "^3.4.3"
+    "eslint": "^5.16.0",
+    "eslint-config-healthier": "^2.0.0",
+    "healthier": "^2.0.0"
+  },
+  "scripts": {
+    "lint": "eslint src/index.js"
   },
   "@pika/pack": {
     "pipeline": [
-      ["@pika/plugin-standard-pkg"],
-      ["@pika/plugin-build-node"],
-      ["@pika/plugin-build-web"],
-      ["@pika/plugin-build-types"]
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
     ]
   }
 }
