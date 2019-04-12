@@ -1,6 +1,6 @@
 {
   "name": "mini-list",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Small immutable array library",
   "main": "src/index.js",
   "repository": "git@github.com:ABuffSeagull/mini-list.git",
@@ -20,10 +20,23 @@
   },
   "@pika/pack": {
     "pipeline": [
-      ["@pika/plugin-standard-pkg"],
-      ["@pika/plugin-build-node"],
-      ["@pika/plugin-build-web"],
-      ["pika-plugin-minify", { "terserOptions": { "module": true } }]
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ],
+      [
+        "pika-plugin-minify",
+        {
+          "terserOptions": {
+            "module": true
+          }
+        }
+      ]
     ]
   }
 }
