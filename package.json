@@ -12,22 +12,18 @@
     "@pika/plugin-standard-pkg": "^0.3.14",
     "eslint": "^5.16.0",
     "eslint-config-healthier": "^2.0.0",
-    "healthier": "^2.0.0"
+    "healthier": "^2.0.0",
+    "pika-plugin-minify": "^0.1.0"
   },
   "scripts": {
     "lint": "eslint src/index.js"
   },
   "@pika/pack": {
     "pipeline": [
-      [
-        "@pika/plugin-standard-pkg"
-      ],
-      [
-        "@pika/plugin-build-node"
-      ],
-      [
-        "@pika/plugin-build-web"
-      ]
+      ["@pika/plugin-standard-pkg"],
+      ["@pika/plugin-build-node"],
+      ["@pika/plugin-build-web"],
+      ["pika-plugin-minify", { "terserOptions": { "module": true } }]
     ]
   }
 }
