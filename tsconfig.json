@@ -1,6 +1,0 @@
-{
-	"compilerOptions": {
-		"noImplicitAny": true
-	},
-	"files": ["src/index.ts"]
-}
